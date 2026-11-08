@@ -21,8 +21,8 @@ export function ImageTabs({ views, fit = "contain", tabsAt = "bottom" }: { views
         className={`h-full w-full ${fit === "cover" ? "object-cover" : "object-contain"}`}
       />
       {views.length > 1 && (
-        <div className={`absolute inset-x-0 flex justify-center ${tabsAt === "top" ? "top-3.5" : "bottom-3.5"}`}>
-          <div role="tablist" aria-label="Views" className="flex gap-0.5 border border-line bg-ink/85 p-0.5">
+        <div className={`pointer-events-none absolute inset-x-0 flex justify-center ${tabsAt === "top" ? "top-3.5" : "bottom-3.5"}`}>
+          <div role="tablist" aria-label="Views" className="pointer-events-auto flex gap-0.5 border border-line bg-ink/85 p-0.5">
             {views.map((view, n) => (
               <button
                 key={view.src}

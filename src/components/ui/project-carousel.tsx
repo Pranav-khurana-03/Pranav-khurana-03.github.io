@@ -54,8 +54,9 @@ export function ProjectCarousel({ project }: { project: CadProject }) {
         <button onClick={() => go(i + 1)} aria-label="Next slide" className="absolute bottom-3.5 right-3 grid size-11 place-items-center border border-line bg-ink/85 text-cream hover:border-cream/40">
           <ChevronRight size={18} />
         </button>
-        <div className="absolute inset-x-0 bottom-3.5 flex justify-center">
-          <div role="tablist" className="flex gap-0.5 border border-line bg-ink/85 p-0.5">
+        {/* The strip spans the full width, so it must not catch clicks meant for the arrows beside the tabs. */}
+        <div className="pointer-events-none absolute inset-x-0 bottom-3.5 flex justify-center">
+          <div role="tablist" className="pointer-events-auto flex gap-0.5 border border-line bg-ink/85 p-0.5">
             {slides.map((sl, n) => (
               <button key={sl.label} role="tab" aria-selected={n === i} onClick={() => go(n)}
                 className={`h-11 px-3 font-mono text-[0.66rem] uppercase tracking-wide ${n === i ? "bg-cream text-dark" : "text-muted-2"}`}>
