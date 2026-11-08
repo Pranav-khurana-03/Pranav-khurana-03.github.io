@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pranav Khurana, Engineering Portfolio</title>
+    <meta name="description" content="Pranav Khurana, Computer Engineering at UIUC. Physical AI, robotics, and computer vision: projects, research, and past work." />
+    <meta property="og:title" content="Pranav Khurana, Engineering Portfolio" />
+    <meta property="og:description" content="Computer Engineering at UIUC. Physical AI, robotics, and perception." />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <!-- GitHub Pages SPA redirect: restores the deep link saved by 404.html -->
+    <script>
+      (function () {
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect !== location.href) {
+          history.replaceState(null, null, redirect.slice(location.origin.length));
+        }
+      })();
+    </script>
+    <!-- 3D viewer for .glb files -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
