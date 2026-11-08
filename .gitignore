@@ -1,4 +1,4 @@
-# Logs
+﻿# Logs
 logs
 *.log
 npm-debug.log*
@@ -30,7 +30,7 @@ source-media/
 source-video/
 
 # Local-only working material (not published)
-source-pdf/
-papers/
-legacy/
-visuals/
+/source-pdf/
+/papers/
+/legacy/
+/visuals/
